@@ -1,0 +1,31 @@
+name: Copy Desktop File to the new GitHub repository
+on: [push]
+   
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v1
+        
+      - name: Git Commands
+        run: |
+             mkdir C:/Users/ACER/new-file-create
+             cd C:/Users/ACER/new-file-create
+             git init
+             git remote add origin https://github.com/steja6872/new-file-create.git
+             cp C:/Users/ACER/Desktop/java-programs/reverse.java C:/Users/ACER/new-file-create
+             git branch -M main
+             git add reverse.java
+             git commit -m "Add Java file"
+             git status
+             git push -u origin main
+            
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.11
+          
+      - name: Run the java file print the RESULT
+        run: |
+             javac reverse.java
+             java reverse
