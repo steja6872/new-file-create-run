@@ -12,7 +12,7 @@ jobs:
              mkdir C:/Users/ACER/new-file-create-run
              cd C:/Users/ACER/new-file-create-run
              git init
-             git pull 
+             git pull https://github.com/steja6872/new-file-create-run.git
              git remote add origin https://github.com/steja6872/new-file-create-run.git
              cp C:/Users/ACER/Desktop/java-programs/reverse.java C:/Users/ACER/new-file-create-run
              git branch -M main
