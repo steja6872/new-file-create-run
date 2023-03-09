@@ -14,9 +14,9 @@ jobs:
              git init
              git pull https://github.com/steja6872/new-file-create-run.git
              git remote add origin https://github.com/steja6872/new-file-create-run.git
-             cp C:/Users/ACER/Desktop/java-programs/reverse.java C:/Users/ACER/new-file-create-run
+             cp C:/Users/ACER/Desktop/java-programs/prime.java C:/Users/ACER/new-file-create-run
              git branch -M main
-             git add reverse.java
+             git add prime.java
              git commit -m "Add Java file"
              git status
              git push -u origin main
@@ -28,5 +28,5 @@ jobs:
           
       - name: Run the java file print the RESULT
         run: |
-             javac reverse.java
-             java reverse
+             javac prime.java
+             java prime
