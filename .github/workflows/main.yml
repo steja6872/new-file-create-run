@@ -1,4 +1,4 @@
-name: Copy Desktop File to the new GitHub repository
+name: Copy Desktop File to the new GitHub repository and run the file
 on: [push]
    
 jobs:
@@ -9,11 +9,12 @@ jobs:
         
       - name: Git Commands
         run: |
-             mkdir C:/Users/ACER/new-file-create
-             cd C:/Users/ACER/new-file-create
+             mkdir C:/Users/ACER/new-file-create-run
+             cd C:/Users/ACER/new-file-create-run
              git init
-             git remote add origin https://github.com/steja6872/new-file-create.git
-             cp C:/Users/ACER/Desktop/java-programs/reverse.java C:/Users/ACER/new-file-create
+             git pull 
+             git remote add origin https://github.com/steja6872/new-file-create-run.git
+             cp C:/Users/ACER/Desktop/java-programs/reverse.java C:/Users/ACER/new-file-create-run
              git branch -M main
              git add reverse.java
              git commit -m "Add Java file"
